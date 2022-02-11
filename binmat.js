@@ -1,6 +1,6 @@
 function(c,a){
   let A = "<ALT>",
-  u = #hs.sys.upgrades({full:1}).filter(_=>!_.loaded).map(_=>_.i),
+  u = #hs.sys.upgrades({full:1}).filter(_=>!_.loaded).map(_=>_.sn),
   g = #hs.accts.balance()
   
   for(let i = 0; i < 5; i++) #ms.cash.xfer_gc_to({to:A, amount:Math.min(g, 32e9) })
